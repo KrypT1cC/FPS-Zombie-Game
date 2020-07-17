@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
 
     static int playerScore = 0;
+    public GameObject scoreValue;
 
     public GUISkin mySkin;
 
     // Update is called once per frame
     void Update()
     {
-        
+        scoreValue.GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
     }
     
     public static void AddPoints(int pointValue)
