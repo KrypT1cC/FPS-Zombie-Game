@@ -412,7 +412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508570207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -2.1, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5528,7 +5528,6 @@ GameObject:
   - component: {fileID: 1033435379}
   - component: {fileID: 1033435383}
   - component: {fileID: 1033435384}
-  - component: {fileID: 1033435385}
   m_Layer: 0
   m_Name: Fake Player
   m_TagString: Untagged
@@ -5604,7 +5603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033435378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.363, y: 0.795, z: 89.984}
+  m_LocalPosition: {x: 102.363, y: 0.76, z: 89.984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 324368521}
@@ -5637,22 +5636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!54 &1033435385
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033435378}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1187937798
 GameObject:
   m_ObjectHideFlags: 0
@@ -11423,12 +11406,12 @@ PrefabInstance:
     - target: {fileID: 9123990292870849551, guid: d593d66bbade94e7aa17da6e38cd58c0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.54
+      value: 0.839
       objectReference: {fileID: 0}
     - target: {fileID: 9123990292870849551, guid: d593d66bbade94e7aa17da6e38cd58c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75.61
+      value: 96.39
       objectReference: {fileID: 0}
     - target: {fileID: 9123990292870849551, guid: d593d66bbade94e7aa17da6e38cd58c0,
         type: 3}
@@ -11470,10 +11453,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9123990292870849552, guid: d593d66bbade94e7aa17da6e38cd58c0,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123990292870849552, guid: d593d66bbade94e7aa17da6e38cd58c0,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.27908
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123990292870849552, guid: d593d66bbade94e7aa17da6e38cd58c0,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.019212961
+      objectReference: {fileID: 0}
     - target: {fileID: 9123990292870849554, guid: d593d66bbade94e7aa17da6e38cd58c0,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder
+      value: Ammo Container
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d593d66bbade94e7aa17da6e38cd58c0, type: 3}
