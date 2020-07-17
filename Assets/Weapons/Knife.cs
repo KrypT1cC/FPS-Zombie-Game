@@ -1,36 +1,41 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Knife : MonoBehaviour
 {
-    public float damage = 10f;
-    public float range = 100f;
-    public float fireRate = 15f;
+    public float range = 7f;
+    public float fireRate = 0.75f;
+    public float damage = 30f;
 
     public Camera fpsCam;
-    public ParticleSystem muzzleFlash;
     public GameObject ImpactEffect;
+    public Animator animator;
 
-    private float nextTimeToFire = 0f;
+    private float nextTimeToFire;
 
+
+    void Start()
+    {
+        
+    }
+
+ 
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            Slice();
         }
     }
-
-    void Shoot()
+    void Slice()
     {
-        muzzleFlash.Play();
+        animator.SetBool("Slice", true);
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
-        {
-            Debug.Log(hit.transform.name);
-
+        {   
             Zombie target = hit.transform.GetComponent<Zombie>();
             if (target != null)
             {
@@ -41,5 +46,11 @@ public class Gun : MonoBehaviour
             Destroy(BulletEffect, 2f);
         }
 
+        Invoke("StopAnimation", 0.5f);
+    }
+
+    void StopAnimation ()
+    {
+        animator.SetBool("Slice", false);
     }
 }
