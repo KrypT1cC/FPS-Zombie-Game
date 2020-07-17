@@ -70,6 +70,7 @@ public class Gun_AK47 : MonoBehaviour
         {
             yield return new WaitForSeconds(reloadTime - animationTime);
         }
+
         if (ammoOwn - maxAmmo < 0)
         {
             finalAmmoNeed = maxAmmo - currentAmmo;
@@ -91,29 +92,6 @@ public class Gun_AK47 : MonoBehaviour
         animator.SetBool("Reloading", false);
 
         yield return new WaitForSeconds(animationTime);
-
-      
-
-       /* if (ammoOwn < maxAmmo)
-        {
-            finalAmmoNeed = maxAmmo - currentAmmo;
-
-            if (finalAmmoNeed > ammoOwn)
-            {
-                currentAmmo += ammoOwn;
-                ammoOwn -= ammoOwn;
-            }
-            else if (finalAmmoNeed < ammoOwn)
-            {
-                currentAmmo += finalAmmoNeed;
-                ammoOwn -= finalAmmoNeed;
-            }
-        }
-        else
-        {
-            currentAmmo = maxAmmo;
-        } */
-      
 
         isReloading = false;
     }
