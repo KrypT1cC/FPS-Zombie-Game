@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        waveNumber = 1;
+        waveNumber = 0;
         StartCoroutine(SpawnWaves());
     }
     void Update ()
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        
+        waveNumber++;
         spawning = true;
         for (int i = 0; i < hazardCount + (waveNumber * 5); i++)
         {
@@ -41,6 +41,5 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(spawnWait);
         }
         spawning = false;
-        waveNumber++;
     }
 }
