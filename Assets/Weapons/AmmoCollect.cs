@@ -18,6 +18,10 @@ public class AmmoCollect : MonoBehaviour
             FindObjectOfType<Gun_Pistol>().ammoOwn = 35;
             FindObjectOfType<Gun_Pistol>().currentAmmo = 7;
         }
+        else
+        {
+            return;
+        }
 
         Destroy(box, 1f);
     }
