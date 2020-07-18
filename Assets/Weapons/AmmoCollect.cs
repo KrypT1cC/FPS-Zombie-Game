@@ -8,6 +8,7 @@ public class AmmoCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("testing");
         if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 0)
         {
             FindObjectOfType<Gun_AK47>().ammoOwn = 270;
