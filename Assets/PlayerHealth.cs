@@ -7,7 +7,11 @@ public class PlayerHealth : MonoBehaviour
 
     public int currentHealth;
     public int maximumHealth = 100;
+    public int healTimeCounter = 0;
     public int time = 0;
+    
+
+    public bool zombieTouch = false;
 
     public float hbLength;
 
@@ -24,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         ChangeHealth(0);
-        OnGUI();
+        Healing();
     }
 
     void OnGUI()
@@ -39,24 +43,52 @@ public class PlayerHealth : MonoBehaviour
         hbLength = (Screen.width / 2) * (currentHealth / (float)maximumHealth);
     }
 
-    void TakeDamage()
-    {
-        currentHealth -= 5;
+    public void Healing()
+    {   
+        if (zombieTouch == false)
+        {
+            healTimeCounter++;
+            if (healTimeCounter == 50)
+            {
+                if (currentHealth < 100)
+                {
+                    ChangeHealth(1);
+                }
+
+                healTimeCounter = 0;
+            }
+
+        } 
+
     }
 
     private void OnTriggerStay(Collider col)
     {
+        zombieTouch = true;
      
         if (col.gameObject.tag == "Zombie")
         {
             time++;
             if (time == 50)
             {
-                TakeDamage();
+                ChangeHealth(-5);
                 time = 0;
             }
 
         }
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(5f); 
+        zombieTouch = false; 
+        time = 0;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        StartCoroutine(WaitTime());
+
     }
 
 }
