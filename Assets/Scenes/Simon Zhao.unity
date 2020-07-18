@@ -5251,7 +5251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5354,11 +5354,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: af4e324d42f4d441e8223b3ae74cd4fa,
         type: 3}
       propertyPath: m_Name
-      value: Zombie
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: af4e324d42f4d441e8223b3ae74cd4fa,
-        type: 3}
-      propertyPath: m_TagString
       value: Zombie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5533,8 +5528,6 @@ GameObject:
   - component: {fileID: 1033435379}
   - component: {fileID: 1033435383}
   - component: {fileID: 1033435384}
-  - component: {fileID: 1033435385}
-  - component: {fileID: 1033435386}
   m_Layer: 0
   m_Name: Fake Player
   m_TagString: Untagged
@@ -5643,37 +5636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &1033435385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033435378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6923fb2637fd5fb4cb4b4de5d1bb1126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  maximumHealth: 100
-  i: 0
-  time: 0
-  zombieTouch: 0
-  hbLength: 0
---- !u!135 &1033435386
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033435378}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.86864567
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1187937798
 GameObject:
   m_ObjectHideFlags: 0
