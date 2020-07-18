@@ -6,7 +6,7 @@ using System.Threading;
 using UnityEngine;
 
 public class FInd : MonoBehaviour
-{
+{/*
     public Transform player;
     public int MoveSpeed = 4;
     public float MinDist = 0.1f;
@@ -35,8 +35,25 @@ public class FInd : MonoBehaviour
         }
 
     }
+*/
+    public Transform player;
+    private GameObject wayPoint;
+    private Vector3 wayPointPos;
+    //This will be the zombie's speed. Adjust as necessary.
+    private float speed = 6.0f;
+    void Start()
+    {
+        //At the start of the game, the zombies will find the gameobject called wayPoint.
+        wayPoint = GameObject.Find("Waypoint");
+    }
 
-
-
-
+    void Update()
+    {
+        GetComponent<Animator>().SetBool("isWalking", true);
+        wayPointPos = new Vector3(wayPoint.transform.position.x, transform.position.y, wayPoint.transform.position.z);
+        Vector3 look = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.LookAt(look);
+        //Here, the zombie's will follow the waypoint.
+        transform.position = Vector3.MoveTowards(transform.position, wayPointPos, speed * Time.deltaTime);
+    }
 }
