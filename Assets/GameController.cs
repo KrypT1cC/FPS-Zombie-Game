@@ -19,9 +19,9 @@ public class GameController : MonoBehaviour
         waveNumber = 0;
         StartCoroutine(SpawnWaves());
     }
-    void Update ()
+    void Update()
     {
-        if(!spawning && zombieCounter.transform.childCount == 0)
+        if (!spawning && zombieCounter.transform.childCount == 0)
         {
             StartCoroutine(SpawnWaves());
             spawning = true;
