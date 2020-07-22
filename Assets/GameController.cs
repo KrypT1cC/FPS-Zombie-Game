@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GameController : MonoBehaviour
 {
     public GameObject hazard;
-    public Vector3 spawnValues;
+    public Vector3 [] spawnValues = new Vector3 [2];
     public int hazardCount;
     public float spawnWait;
     public float startWait;
@@ -34,7 +35,9 @@ public class GameController : MonoBehaviour
         spawning = true;
         for (int i = 0; i < hazardCount + (waveNumber * 5); i++)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+            //Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+            int randomNumber = UnityEngine.Random.Range(0, spawnValues.Length);
+            Vector3 spawnPosition = new Vector3(spawnValues[randomNumber].x, spawnValues[randomNumber].y, spawnValues[randomNumber].z);
             Quaternion spawnRotation = Quaternion.identity;
             GameObject copy = Instantiate(hazard, spawnPosition, spawnRotation);
             copy.transform.parent = zombieCounter.transform;
