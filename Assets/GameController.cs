@@ -5,7 +5,7 @@ using System;
 public class GameController : MonoBehaviour
 {
     public GameObject hazard;
-    public Vector3 [] spawnValues = new Vector3 [2];
+    public Vector3 [] spawnValues = new Vector3 [6];
     public int hazardCount;
     public float spawnWait;
     public float startWait;
