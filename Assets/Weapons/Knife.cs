@@ -52,5 +52,6 @@ public class Knife : MonoBehaviour
     void StopAnimation ()
     {
         animator.SetBool("Slice", false);
+        print("false");
     }
 }
