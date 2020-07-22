@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class PlayerHealth : MonoBehaviour
     public int maximumHealth = 100;
     public int healingTimeCounter = 0;
     public int time = 0;
-
     public float hbLength;
-
     public bool zombieTouching = false;
-
+    public bool alive;
+    public float LoadScene;
+    
     // Use this for initialization
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
 
         hbLength = Screen.width / 2;
 
+        alive = true;
 
     }
     // Update is called once per frame
@@ -28,7 +30,12 @@ public class PlayerHealth : MonoBehaviour
     {
         ChangeHealth(0);
         Healing();
-        
+
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
     }
 
     void OnGUI()
@@ -91,7 +98,8 @@ public class PlayerHealth : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         StartCoroutine(WaitTime());
-    }
-
+    } 
 }
+
+
 
