@@ -355,11 +355,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100498662}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -610.137, y: -242.5, z: 89.984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.0340424, y: 369.56, z: 3.3880005}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 1205038600}
-  m_RootOrder: 4
+  m_Father: {fileID: 1022983774}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &100498666
 MonoBehaviour:
@@ -444,7 +444,7 @@ MonoBehaviour:
   finalAmmoNeed: 0
   reloadTime: 2.5
   animationTime: 0.25
-  fpsCam: {fileID: 0}
+  fpsCam: {fileID: 1375486053}
   muzzleFlash: {fileID: 582982642}
   ImpactEffect: {fileID: 6008800449229044151, guid: c77d562df8a664b0486c0363de293618,
     type: 3}
@@ -462,7 +462,6 @@ GameObject:
   - component: {fileID: 508570208}
   - component: {fileID: 508570211}
   - component: {fileID: 508570212}
-  - component: {fileID: 508570213}
   m_Layer: 0
   m_Name: Map
   m_TagString: Ground
@@ -556,19 +555,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &508570213
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508570207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &573613391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,7 +5495,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1205038600}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5927,7 +5913,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1205038600}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6034,6 +6020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zombie (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af4e324d42f4d441e8223b3ae74cd4fa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Zombie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4e324d42f4d441e8223b3ae74cd4fa, type: 3}
@@ -6279,8 +6270,23 @@ MonoBehaviour:
   animationTime: 0.25
   fpsCam: {fileID: 0}
   muzzleFlash: {fileID: 0}
-  ImpactEffect: {fileID: 0}
-  animator: {fileID: 0}
+  ImpactEffect: {fileID: 6008800449229044151, guid: c77d562df8a664b0486c0363de293618,
+    type: 3}
+  animator: {fileID: 1223340102}
+--- !u!136 &1022983778
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022983766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 4.007139
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9567442, z: 0}
 --- !u!1 &1046412338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,7 +6411,6 @@ RectTransform:
   - {fileID: 94046461}
   - {fileID: 573613392}
   - {fileID: 1753138153}
-  - {fileID: 100498665}
   - {fileID: 1484099421}
   - {fileID: 1651138282}
   - {fileID: 640704417}
@@ -6610,6 +6615,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!20 &1375486053 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6162965981725446583, guid: 6de1aa32a24ef564c8bb0380a659c53f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1753459372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1484099420
 GameObject:
   m_ObjectHideFlags: 0
@@ -6640,7 +6651,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1205038600}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6745,7 +6756,7 @@ RectTransform:
   m_Children:
   - {fileID: 1868943413}
   m_Father: {fileID: 1205038600}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6898,7 +6909,7 @@ MonoBehaviour:
   finalAmmoNeed: 0
   reloadTime: 3.5
   animationTime: 0.25
-  fpsCam: {fileID: 0}
+  fpsCam: {fileID: 1375486053}
   muzzleFlash: {fileID: 2129361194}
   ImpactEffect: {fileID: 6008800449229044151, guid: c77d562df8a664b0486c0363de293618,
     type: 3}
@@ -7711,7 +7722,7 @@ MonoBehaviour:
   range: 10
   fireRate: 0.75
   damage: 30
-  fpsCam: {fileID: 0}
+  fpsCam: {fileID: 1375486053}
   ImpactEffect: {fileID: 6008800449229044151, guid: c77d562df8a664b0486c0363de293618,
     type: 3}
   animator: {fileID: 2033676527}
