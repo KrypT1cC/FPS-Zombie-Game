@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d71fa952a794dd8b5606046bdb747c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 16.66
   range: 100
   fireRate: 8
   ammoOwn: 35
@@ -5910,6 +5910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c66a65ccbc48a44f934f6f97d2fdf13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScore: 0
   scoreValue: {fileID: 94046460}
   waveValue: {fileID: 1753138152}
   mySkin: {fileID: 0}
@@ -6787,7 +6788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0543ec48504b745b3a00d7e74a9da12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
   range: 100
   fireRate: 10
   ammoOwn: 270
@@ -7652,7 +7653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f79763922db489c840e2f3d8458426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 50
   fireRate: 0.75
   damage: 30
   fpsCam: {fileID: 1135530440}
