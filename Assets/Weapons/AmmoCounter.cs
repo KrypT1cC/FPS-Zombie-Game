@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AmmoCounter : MonoBehaviour
 {
-    //public GameObject AmmoTextMesh; 
+    public GameObject AmmoTextMesh; 
     public string currentAmmoOnGun;
     public string ammoOwnForGun;
 
@@ -21,17 +21,17 @@ public class AmmoCounter : MonoBehaviour
         {
             currentAmmoOnGun = FindObjectOfType<Gun_AK47>().currentAmmo.ToString();
             ammoOwnForGun = FindObjectOfType<Gun_AK47>().ammoOwn.ToString();
-            GetComponent<TMPro.TextMeshProUGUI>().text = currentAmmoOnGun + " / " + ammoOwnForGun;
+            AmmoTextMesh.GetComponent<TMPro.TextMeshProUGUI>().text = currentAmmoOnGun + " / " + ammoOwnForGun;
         }
         else if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 1)
         {
             currentAmmoOnGun = FindObjectOfType<Gun_Pistol>().currentAmmo.ToString();
             ammoOwnForGun = FindObjectOfType<Gun_Pistol>().ammoOwn.ToString();
-            GetComponent<TMPro.TextMeshProUGUI>().text = currentAmmoOnGun + " / " + ammoOwnForGun;
+            AmmoTextMesh.GetComponent<TMPro.TextMeshProUGUI>().text = currentAmmoOnGun + " / " + ammoOwnForGun;
         }
         else if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 2)
         {
-            GetComponent<TMPro.TextMeshProUGUI>().text = "Infinite";
+            AmmoTextMesh.GetComponent<TMPro.TextMeshProUGUI>().text = "Infinite";
         }
      
 
