@@ -6,7 +6,7 @@ public class Knife : MonoBehaviour
 {
     public float range = 7f;
     public float fireRate = 0.75f;
-    public float damage = 30f;
+    public float damage = 50f;
 
     public Camera fpsCam;
     public GameObject ImpactEffect;

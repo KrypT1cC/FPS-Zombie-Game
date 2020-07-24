@@ -11,6 +11,7 @@ public class Zombie : MonoBehaviour
         health -= amount;
         if (health <= 0f)
         {
+            FindObjectOfType<Score>().AddPoints(10);
             Die();
         }
     }

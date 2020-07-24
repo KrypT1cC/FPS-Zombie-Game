@@ -7,7 +7,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
 
-    static int playerScore = 0;
+    public int playerScore = 0;
     public GameObject scoreValue;
     public GameObject waveValue;
     public GUISkin mySkin;
@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
         waveValue.GetComponent<TextMeshProUGUI>().text = myGameController.waveNumber.ToString();
     }
     
-    public static void AddPoints(int pointValue)
+    public void AddPoints(int pointValue)
     {
         playerScore += pointValue;
     }

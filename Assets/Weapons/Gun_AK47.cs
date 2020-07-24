@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Gun_AK47 : MonoBehaviour
 {
-    public float damage = 10f;
+    public float damage = 20f;
     public float range = 100f;
     public float fireRate = 10f;
 
