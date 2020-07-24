@@ -7235,7 +7235,7 @@ PrefabInstance:
     - target: {fileID: 6162965980822665931, guid: 6de1aa32a24ef564c8bb0380a659c53f,
         type: 3}
       propertyPath: speed
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6162965981725446576, guid: 6de1aa32a24ef564c8bb0380a659c53f,
         type: 3}
@@ -7685,21 +7685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78bcb92c5eed9a488acce87ee9c5f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocations:
-  - {fileID: 744571194}
-  - {fileID: 747676816}
-  - {fileID: 1921338734}
-  - {fileID: 24403593}
-  whatToSpawnPrefab:
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
-  whatToSpawnClone:
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
-  - {fileID: 9123990292531776767}
 --- !u!4 &1906454979
 Transform:
   m_ObjectHideFlags: 0
@@ -12647,12 +12632,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d593d66bbade94e7aa17da6e38cd58c0, type: 3}
---- !u!1 &9123990292531776767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9123990292870849554, guid: d593d66bbade94e7aa17da6e38cd58c0,
-    type: 3}
-  m_PrefabInstance: {fileID: 9123990292531776766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9123990292531776768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9123990292870849551, guid: d593d66bbade94e7aa17da6e38cd58c0,
