@@ -40,7 +40,7 @@ public class FInd : MonoBehaviour
     private GameObject wayPoint;
     private Vector3 wayPointPos;
     //This will be the zombie's speed. Adjust as necessary.
-    private float speed = 15.0f;
+    private float speed = 5.0f;
     void Start()
     {
         //At the start of the game, the zombies will find the gameobject called wayPoint.
