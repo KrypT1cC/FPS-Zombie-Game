@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Simon Zhao.unity
+    guid: 6011fe2d0d8984b71ad93a006e1d6df0
+  - enabled: 1
+    path: Assets/Scenes/Game Over..unity
+    guid: 70a2b4c685f43b344a2e94531ce5892d
   m_configObjects: {}
