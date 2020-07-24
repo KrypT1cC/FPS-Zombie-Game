@@ -8,22 +8,25 @@ public class AmmoCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("testing");
-        if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 0)
+        if (other.gameObject.name == "First Person Player")
         {
-            FindObjectOfType<Gun_AK47>().ammoOwn = 270;
-            FindObjectOfType<Gun_AK47>().currentAmmo = 30;
+            if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 0)
+            {
+                FindObjectOfType<Gun_AK47>().ammoOwn = 270;
+                FindObjectOfType<Gun_AK47>().currentAmmo = 30;
+            }
+            else if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 1)
+            {
+                FindObjectOfType<Gun_Pistol>().ammoOwn = 35;
+                FindObjectOfType<Gun_Pistol>().currentAmmo = 7;
+            }
+            else
+            {
+                return;
+            }
+            Destroy(box, 1f);
         }
-        else if (FindObjectOfType<Weapon_Switching>().selectedWeapon == 1)
-        {
-            FindObjectOfType<Gun_Pistol>().ammoOwn = 35;
-            FindObjectOfType<Gun_Pistol>().currentAmmo = 7;
-        }
-        else
-        {
-            return;
-        }
-
-        Destroy(box, 1f);
+   
+      
     }
 }

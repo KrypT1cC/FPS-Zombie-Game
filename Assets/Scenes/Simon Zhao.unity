@@ -5780,14 +5780,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78bcb92c5eed9a488acce87ee9c5f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoCopy: {fileID: 0}
+  ammoCopy: {fileID: 8746665902855151046, guid: f1ca7d11fce914c1cb693ca7f8fd7ad3,
+    type: 3}
   spawnCoords:
-  - {x: 421.11, y: 0, z: 605.81}
-  - {x: 394.14, y: 0, z: 358.74}
+  - {x: 421.11, y: 1.5, z: 605.81}
+  - {x: 394.14, y: 1, z: 358.74}
   - {x: 95.163, y: 0, z: 69.109}
-  - {x: 831.26, y: 0, z: 911}
-  - {x: 69.52, y: 0, z: 903.31}
-  - {x: 922.16, y: 0, z: 70.95}
+  - {x: 831.26, y: 1, z: 913}
+  - {x: 69.52, y: 1, z: 903.31}
+  - {x: 922.16, y: 0.8, z: 70.95}
   ammoCopyCount: 3
   spawnWait: 1
   startWait: 1
@@ -6212,6 +6213,20 @@ MonoBehaviour:
   zombieTouching: 1
   alive: 1
   LoadScene: 0
+--- !u!136 &1022983769
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022983766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.1
+  m_Height: 4.0300727
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9778521, z: 0}
 --- !u!65 &1022983770
 BoxCollider:
   m_ObjectHideFlags: 0
