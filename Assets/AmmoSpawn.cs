@@ -30,10 +30,12 @@ public class AmmoSpawn : MonoBehaviour
         if (!spawning && FindObjectOfType<GameController>().spawning)
         {
             var copies = GameObject.FindGameObjectsWithTag("ammo");
+
             foreach (var ammoDup in copies)
             {
                 Destroy(ammoDup);
             }
+
             StartCoroutine(SpawnAmmo());
             spawning = true;
         }
