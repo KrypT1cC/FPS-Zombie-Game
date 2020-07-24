@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public int waveNumber;
     public GameObject zombieCounter;
 
-    private bool spawning = true;
+    public bool spawning = true;
 
     void Start()
     {
