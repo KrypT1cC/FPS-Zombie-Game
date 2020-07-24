@@ -24,8 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        
-        print(isGrounded);
+
         /*
         if(isGrounded && velocity.y < 0)
         {
@@ -57,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            print("testing");
+           
         }
     }
     void OnCollisionExit(Collision col)
